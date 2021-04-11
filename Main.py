@@ -13,7 +13,7 @@ def Export_Database(portfolio,Selected_Stocks):
     Selected_Stocks_Database = Database_Maker(Selected_Stocks)
     CountCache, VolRatioSort, ValueSort, BuyCapitaSort, SellCapitaSort, BuyQueue, SellQueue = Sorted_Database(Portfolio_Database,portfolio)
 
-    wb = load_workbook(filename='D:\\OneDrive\\Documents\\github\\TSETMC_Dashboard\\Dashboard_Template.xlsx')
+    wb = load_workbook(filename='Dashboard_Template.xlsx')
     ws = wb.active
     
     # Index ---------------------------------------------------------------------------------------------------------
@@ -103,7 +103,7 @@ def Export_Database(portfolio,Selected_Stocks):
     EndTime = time.time()
     print('Your Dashboard is ready! \nIt took {} seconds to create the output excel.'.format(int(EndTime - StartTime)))
 
-    return wb.save(filename="D:\\OneDrive\\Documents\\github\\TSETMC_Dashboard\\TSETMC_DailyDashboard.xlsx")
+    return wb.save(filename="TSETMC_DailyDashboard.xlsx")
 
 
 # Give a list of 7 your desired stocks in order to make the Excel-based Dashboard --------------------------------------
